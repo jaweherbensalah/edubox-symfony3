@@ -16,21 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-
-            new FOS\UserBundle\FOSUserBundle(),
-
-            new Misd\PhoneNumberBundle\MisdPhoneNumberBundle(),
-
-            new Sonata\CoreBundle\SonataCoreBundle(),
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-
-            new EduBoxBundle\EduBoxBundle(),
+            new AppBundle\AppBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

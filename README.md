@@ -1,46 +1,77 @@
-# EduBox – School Management System
-This system is an innovative system which allows school management by reducing paperwork, controlling attendance and performance of students, informing parents of their children and ensuring their constant communication. In the novel system, we maintained previous design of class-book which is familiar to teachers so that their daily works are facilitated.  User-friendly interface will help parents, teachers, and students to adapt their new design and features. Edubox mainly helps to save time to fill in the class-books as well as time and power for regular reports.
-## Our Mission
-Our mission consists of introducing members of various educational bodies with electronic journal and record books, ensuring their control of the quality of the educational services provided, management of system, and establishing simplistic and secure system for management of various documents relating to academic affairs. 
-## Availability
-The system can be used at places where Internet is available. Elimination of queues for filling up their magazines, facilities of working with the journals for the heads of school at the end of each quarter proves availability of the project. 
-## Information
-The information is provided for the school administration, teachers, partners and students according to their rights. Changes to the information e.g. table of subjects and other changes instantly appear in the system. Besides, the system shows teachers to fill which journals pertain to the specific classes and need to be completed clearly showing their status which present another advantage of the platform. 
-## Statistics
-The system features a suite of reporting tools; therefore all reports are automatically calculated and presented with updated results based on present data. Results of reports are updated with dynamic methods and represented in graphics. This advantageous features of the system absolutely removes paperwork. 
-## Management
-Completion of journals by teachers, and all types of performance of users (as per class, course, specific student or teacher) are shown to the administration. Parents can see the remarks and marks given to their children, and are informed about homework and unattended classes. The users according to their preferences are notified with SMS and electronic mail on various topics. 
-Next Step in the Growth of Education
-Digital system will become a new standard disrupting current paper-based tradition. It will comply with the all requirements for information & communication and innovation technologies at all schools enabling them to reach new heights.
-## Project Summary
-### Admin panel 
-- About school
-- Calendars
-- Holidays
-- Subject schedules
-- Subject areas
-- Subjects
-- Users
-- Classes
-### Teacher panel 
-- Subject schedules
-- Journals
-- Lessons
-- Homework
-- Quarters
-- Students rating
-- Attendance
-### Student panel 
-- Diary
-- Lessons
-- Homework
-- Quarters
-### Parent panel 
-- Students list
-- Student diary
-- Student lessons
-- Student homework
-- Student quarter
-### Other pages
-- Login
-- Profile
+Symfony Standard Edition
+========================
+
+**WARNING**: This distribution does not support Symfony 4. See the
+[Installing & Setting up the Symfony Framework][15] page to find a replacement
+that fits you best.
+
+Welcome to the Symfony Standard Edition - a fully-functional Symfony
+application that you can use as the skeleton for your new applications.
+
+For details on how to download and get started with Symfony, see the
+[Installation][1] chapter of the Symfony Documentation.
+
+What's inside?
+--------------
+
+The Symfony Standard Edition is configured with the following defaults:
+
+  * An AppBundle you can use to start coding;
+
+  * Twig as the only configured template engine;
+
+  * Doctrine ORM/DBAL;
+
+  * Swiftmailer;
+
+  * Annotations enabled for everything.
+
+It comes pre-configured with the following bundles:
+
+  * **FrameworkBundle** - The core Symfony framework bundle
+
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+
+  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
+    component
+
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
+    sending emails
+
+  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
+    capabilities
+
+  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
+    using the PHP built-in web server
+
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Standard Edition are
+released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  https://symfony.com/doc/3.4/setup.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/3.4/doctrine.html
+[8]:  https://symfony.com/doc/3.4/templating.html
+[9]:  https://symfony.com/doc/3.4/security.html
+[10]: https://symfony.com/doc/3.4/email.html
+[11]: https://symfony.com/doc/3.4/logging.html
+[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
+[15]: https://symfony.com/doc/current/setup.html

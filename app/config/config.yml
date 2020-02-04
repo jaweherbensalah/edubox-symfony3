@@ -2,17 +2,15 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@EduBoxBundle/Resources/config/config.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    edubox.db.table_prefix: box_
 
 framework:
     #esi: ~
-    translator: { fallbacks: ['%locale%'] }
+    #translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -30,8 +28,6 @@ framework:
     fragments: ~
     http_method_override: true
     assets: ~
-    templating:
-        engines: ['twig']
     php_errors:
         log: true
 
@@ -39,10 +35,6 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    globals:
-        journal_manager: '@edubox.journal_manager'
-        user_manager: '@edubox.user_manager'
-        parent_manager: '@edubox.parent_manager'
 
 # Doctrine Configuration
 doctrine:
@@ -77,13 +69,3 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
-
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: EduBoxBundle\Entity\User
-    from_email:
-        address: 'noreply@mail.com'
-        sender_name: 'noreply'
-
-

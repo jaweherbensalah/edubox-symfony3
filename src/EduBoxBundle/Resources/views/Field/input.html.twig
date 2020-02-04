@@ -1,4 +1,0 @@
-{% set label = label is defined ? label : field.vars.label %}
-{% set field_attr = field_attr is defined ? field_attr + {'class':'form-control'} : {'class':'form-control'} %}
-{{ form_label(field, label) }}
-{{ form_widget(field, {'attr':field_attr}) }}

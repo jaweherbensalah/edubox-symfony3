@@ -2,56 +2,8 @@
 # https://symfony.com/doc/current/security.html
 security:
 
-    encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
-
-    role_hierarchy:
-        ROLE_USER: ROLE_SONATA_ADMIN
-        ROLE_ADMIN:
-            - ROLE_EDUBOX_ADMIN_DASHBOARD_ADMIN_ALL
-            - ROLE_EDUBOX_ADMIN_ORGANISATION_ALL
-            - ROLE_EDUBOX_ADMIN_USER_ALL
-            - ROLE_EDUBOX_ADMIN_CALENDAR_ALL
-            - ROLE_EDUBOX_ADMIN_HOLIDAY_ALL
-            - ROLE_EDUBOX_ADMIN_STUDENTS_GROUP_ALL
-            - ROLE_EDUBOX_ADMIN_SUBJECT_ALL
-            - ROLE_EDUBOX_ADMIN_SUBJECT_AREA_ALL
-            - ROLE_EDUBOX_ADMIN_SUBJECT_SCHEDULE_ALL
-        ROLE_TEACHER:
-            - ROLE_EDUBOX_ADMIN_DASHBOARD_TEACHER_ALL
-            - ROLE_EDUBOX_ADMIN_JOURNAL_ALL
-            - ROLE_EDUBOX_ADMIN_QUARTER_ALL
-            - ROLE_EDUBOX_ADMIN_LESSON_ALL
-            - ROLE_EDUBOX_ADMIN_HOMEWORK_ALL
-            - ROLE_EDUBOX_ADMIN_SUBJECT_SCHEDULE_LIST
-            - ROLE_EDUBOX_ADMIN_USER_LIST
-            - ROLE_EDUBOX_ADMIN_USER_VIEW
-            - ROLE_EDUBOX_ADMIN_STUDENT_RATING_LIST
-            - ROLE_EDUBOX_ADMIN_STATISTIC_ALL
-        ROLE_PARENT:
-            - ROLE_EDUBOX_ADMIN_DASHBOARD_PARENT_ALL
-            - ROLE_EDUBOX_ADMIN_DIARY_LIST
-            - ROLE_EDUBOX_ADMIN_LESSON_LIST
-            - ROLE_EDUBOX_ADMIN_LESSON_VIEW
-            - ROLE_EDUBOX_ADMIN_HOMEWORK_LIST
-            - ROLE_EDUBOX_ADMIN_HOMEWORK_VIEW
-            - ROLE_EDUBOX_ADMIN_QUARTER_LIST
-        ROLE_STUDENT:
-            - ROLE_EDUBOX_ADMIN_DASHBOARD_STUDENT_ALL
-            - ROLE_EDUBOX_ADMIN_DIARY_LIST
-            - ROLE_EDUBOX_ADMIN_LESSON_LIST
-            - ROLE_EDUBOX_ADMIN_LESSON_VIEW
-            - ROLE_EDUBOX_ADMIN_HOMEWORK_LIST
-            - ROLE_EDUBOX_ADMIN_HOMEWORK_VIEW
-            - ROLE_EDUBOX_ADMIN_QUARTER_LIST
-            - ROLE_EDUBOX_ADMIN_STUDENT_RATING_LIST
-
-
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        fos_userbundle:
-            id: fos_user.user_provider.username
-
         in_memory:
             memory: ~
 
@@ -62,16 +14,12 @@ security:
             security: false
 
         main:
-            pattern: ^/
-            user_checker: security.user_checker
-            form_login:
-                provider: fos_userbundle
-                csrf_token_generator: security.csrf.token_manager
-            logout:     true
-            anonymous:  true
+            anonymous: ~
+            # activate different ways to authenticate
+            logout_on_user_change: true
 
-    access_control:
-        - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/panel, role: ROLE_USER }
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~

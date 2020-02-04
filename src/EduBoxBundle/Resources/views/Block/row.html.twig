@@ -1,7 +1,0 @@
-{% set label = label is defined ? label : field.vars.label %}
-
-<div class="form-group {% if not field.vars.valid %}has-error{% endif %}">
-    {{ form_label(field, label) }}
-    {{ field_content }}
-    {{ form_errors(field, {'attr':{'class':'help-block'}}) }}
-</div>
